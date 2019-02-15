@@ -1,0 +1,154 @@
+@media #{$small-up} {
+  @font-face {
+    font-family: 'Raleway';
+
+    src: url('~static/fonts/raleway-black-webfont.woff2') format('woff2');
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'Raleway';
+
+    src: url('~static/fonts/raleway-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Raleway';
+
+    src: url('~static/fonts/raleway-medium-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Raleway';
+
+    src: url('~static/fonts/raleway-light-webfont.woff2') format('woff2');
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+
+    src: url('~static/fonts/opensans-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+
+    src: url('~static/fonts/opensans-regular-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+
+    src: url('~static/fonts/merriweather-regular-webfont.woff2') format('woff2');
+  }
+
+  h1 {
+    font-family: $raleway;
+    font-weight: 400;
+  }
+
+  h2, h3, h4, h5, h6, legend {
+    font-family: $raleway;
+    font-weight: 700;
+  }
+}
+
+@media #{$xlarge-up} {
+  .wrapper {
+    max-width: $layout-xlarge-max-width;
+  }
+}
+
+
+
+
+.article {
+  padding-bottom: 4rem;
+  font-family: $merriweather;
+  font-size: 0.630em; // reset 16px
+
+  a {
+    border-bottom: $color-primary;
+  }
+
+  h6 {
+    text-transform: uppercase;
+  }
+
+  button, .button {
+    font-size: 1rem;
+    color: $color-primary-light;
+    background: $color-secondary;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      transform: translate(0);
+      background: $color-secondary;
+    }
+  }
+
+  @media #{$small-up} {
+    h1 {
+      font-size: 6.250em; // 100
+      font-weight: normal;
+    }
+
+    h2 {
+      font-size: 4.250em;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 2.250em;
+      font-weight: normal;
+    }
+
+    h4, h5 {
+      font-size: 1.250em;
+      font-weight: normal;
+    }
+  }
+
+  @media #{$medium-up} {
+    h1 {
+      font-size: 6.875em; // 110
+    }
+
+    h2 {
+      font-size: 4.875em; // 100
+    }
+
+    h3 {
+      font-size: 2.875em; // 100
+    }
+
+    h4, h5 {
+      font-size: 1.875em; // 100
+    }
+  }
+
+  @media #{$large-up} {
+    font-size: 1.5em; //24px
+
+    h1 {
+      font-size: 4.317em; // 130
+    }
+
+    h2 {
+      font-size: 3.317em;
+    }
+
+    h3 {
+      font-size: 2.317em;
+    }
+
+    h4, h5 {
+      font-size: 1.317em;
+    }
+  }
+}
+
+// /article

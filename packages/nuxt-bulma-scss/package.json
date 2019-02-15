@@ -1,0 +1,16 @@
+{
+  "name": "@olivierbelaud/nuxt-bulma-scss",
+  "version": "1.0.0",
+  "description": "Nuxt Bulma SCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "@scenso/styleguide": "^1.0.0",
+    "bulma": "^0.7.4"
+  }
+}

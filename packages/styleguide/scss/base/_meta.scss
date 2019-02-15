@@ -1,0 +1,34 @@
+.gallery--author {
+  padding: $base-line $base-line $base-line*2;
+  text-align: left;
+  background-color: #fafafa;
+}
+
+.gallery--item {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  color: #fff;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+.gallery--title {
+  margin: $base-line/4 0;
+  text-align: center;
+}
+
+.genre {
+  margin: 0;
+  font-size: $smaller;
+  text-transform: uppercase;
+}
+
+.company {
+  font-size: $smaller;
+}

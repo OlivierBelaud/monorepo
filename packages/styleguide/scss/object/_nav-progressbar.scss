@@ -1,0 +1,84 @@
+.progressbar {
+  overflow: visible;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5vh 0 3rem;
+  padding: 0;
+  // CSS counters to number the steps
+  counter-reset: step;
+  text-align: center;
+
+  @media #{$medium-up} {
+    font-family: $opensans !important;
+  }
+
+  li {
+    overflow: visible;
+    position: relative;
+    width: 33%;
+    height: 4.5rem;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: $color-primary-dark;
+  }
+
+  li:before {
+    position: relative;
+    z-index: 1;
+    content: counter(step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px;
+    width: 4.5rem !important;
+    height: 4.5rem !important;
+    line-height: 4.5rem !important;
+    font-size: 2.5rem  !important;
+    font-weight: bold;
+    counter-increment: step;
+    text-align: center;
+    color: $color-primary-light;
+    border-radius: 50%;
+    background: $color-grey;
+  }
+
+  li:after {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    top: 50% !important;
+    left: -50%;
+    width: 100%;
+    height: 8px;
+    background: $color-grey;
+    transform: translateY(calc(-50% - 2px)) ;
+  }
+
+  li:first-child:after {
+    content: none;
+  }
+
+  li:nth-of-type(4):before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: $color-primary-dark no-repeat 50% 50%;
+    background-size: 60%;
+  }
+
+  li:nth-of-type(4):after {
+    top: 23px;
+  }
+
+  li.active:before, li.active:after {
+    color: $color-primary-light;
+    background-color: $color-primary-dark;
+  }
+
+  & + h1 {
+    margin: 3.5rem 0;
+  }
+}

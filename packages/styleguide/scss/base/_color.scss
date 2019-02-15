@@ -1,0 +1,64 @@
+$color-primary: #3587ab !default;
+$color-primary-light: #f5f5f5 !default;
+$color-primary-dark: #0b0102 !default;
+$color-secondary: #002f58 !default;
+$color-secondary-light: #4f7ba2 !default;
+$color-secondary-dark: #001c33;
+$color-grey: #7d7d7d;
+$color-grey-medium: #bebbbc;
+$color-grey-light: #c9c9c9;
+$color-cat-danse: #00a9ed;
+$color-cat-jeunesse: #ee63a0;
+$color-cat-cirque: #ce2b2c;
+$color-cat-theatre: #eb6f2d;
+$color-cat-concert: #cd098c;
+$color-cat-humour: #82bf37;
+$color-cat-opera: #0067b3;
+$color-btn-modal: #8ec541;
+$color-btn-modal-2: #00a9ed;
+$boxshadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+0 1px 3px rgba(0, 0, 0, 0.08);
+$themes: (cat--humour: $color-cat-humour,
+cat--danse: $color-cat-danse,
+cat--dance: $color-cat-danse,
+cat--Danse: $color-cat-danse,
+cat--jeunesse: $color-cat-jeunesse,
+cat--musical: $color-cat-humour,
+cat--Comédie: $color-cat-humour,
+cat--cirque: $color-cat-cirque,
+cat--Cirque: $color-cat-cirque,
+cat--circus: $color-cat-cirque,
+cat--theatre: $color-cat-theatre,
+cat--Théâtre: $color-cat-theatre,
+cat--concert: $color-cat-concert,
+cat--Concert: $color-cat-concert,
+cat--opera: $color-cat-opera,
+cat--Opéra: $color-cat-opera);
+
+@mixin theme($name, $color) {
+  .#{$name} {
+    .genre {
+      color: $color;
+    }
+
+    .show--genre {
+      color: $color-primary-light;
+      background: $color;
+    }
+  }
+
+  .section--list .#{$name} {
+    img {
+      border-bottom: 4px solid $color;
+    }
+  }
+
+  .#{$name} + article .nav-article {
+    background: $color;
+  }
+}
+
+@each $key,
+$value in $themes {
+  @include theme($key, $value);
+}

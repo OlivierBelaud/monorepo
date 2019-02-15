@@ -1,0 +1,165 @@
+.account {
+  font-size: 0.8em;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    margin: 2em 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: $color-secondary;
+  }
+
+  .section-title, .form-account {
+    padding: 1em 2em;
+    background: $color-primary-light;
+    box-shadow: $boxshadow;
+  }
+
+  .section-title {
+    margin-top: 4rem;
+    padding: 0 2em;
+  }
+
+  .grid-account > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em 2em 3em;
+    height: 100%;
+    border-radius: 7px;
+    background: $color-primary-light;
+    box-shadow: $boxshadow;
+
+    h3, legend {
+      margin-bottom: 1em;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: $color-secondary;
+
+      @media #{$medium-up} {
+        & {
+          font-family: $raleway;
+          font-weight: 900;
+        }
+      }
+    }
+
+    [role='heading'], button, input[type='submit'], .button {
+      margin: auto 0 0 auto;
+    }
+
+    [role='heading'] {
+      font-size: 1.2em;
+      border-radius: 7px;
+      background: $color-secondary;
+    }
+  }
+
+  .form-credit-card {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+
+    & > div label, & > div input & > div select {
+      margin-bottom: 0.3rem;
+      width: auto;
+      line-height: 1.2;
+    }
+
+    & > div {
+      select {
+        width: 100%;
+      }
+    }
+
+    @media #{$medium-up} {
+      .cgv, .expiration-card {
+        max-width: 20%;
+      }
+
+      .postal-code {
+        max-width: 30%;
+      }
+
+      .country {
+        width: 100%;
+        max-width: 60%;
+      }
+    }
+  }
+
+  .form-notification {
+    div {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    label {
+      span {
+        display: block;
+      }
+
+      @media #{$medium-up} {
+        & {
+          font-family: $raleway;
+          font-weight: 700;
+
+          span {
+            font-family: 'Raleway';
+          }
+        }
+      }
+    }
+
+    input[type='checkbox'] {
+      margin: 0 0.3rem 0.3rem;
+      width: auto;
+    }
+
+    fieldset {
+      border-width: 5px;
+      border-color: $color-secondary;
+
+      legend {
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .table {
+    th, td {
+      padding: 0.5rem 1.1rem;
+      text-align: left;
+      border: none;
+    }
+
+    td:last-of-type {
+      text-align: right;
+    }
+
+    tr:nth-of-type(even) {
+      background: lighten($color-grey, 20%);
+    }
+
+    thead {
+      background: $color-primary;
+
+      @media #{$medium-up} {
+        & {
+          font-family: $raleway;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

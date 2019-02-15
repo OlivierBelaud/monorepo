@@ -1,0 +1,89 @@
+$color-primary: #3587ab !default;
+$color-primary-light: #f5f5f5 !default;
+$color-primary-dark: #0b0102 !default;
+$color-secondary: #0e2a4f !default;
+$color-secondary-light: color(gray, 2) !default;
+$color-secondary-dark: color(gray, 9) !default;
+$color-grey: #7d7d7d;
+$color-grey-medium: #bebbbc;
+$color-grey-light: #c9c9c9;
+$color-cat-danse: #00a9ed;
+$color-cat-jeunesse: #ee63a0;
+$color-cat-cirque: #ce2b2c;
+$color-cat-theatre: #eb6f2d;
+$color-cat-concert: #cd098c;
+$color-cat-humour: #82bf37;
+$color-cat-opera: #0067b3;
+$color-btn-modal: #8ec541;
+$color-btn-modal-2: #00a9ed;
+
+.ui-color .grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.block-color {
+  div {
+    padding: 20%;
+    border: 3px solid $color-primary-dark;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  &:nth-of-type(1) div {
+    background: $color-primary;
+  }
+
+  &:nth-of-type(2) div {
+    background: $color-secondary;
+  }
+
+  &:nth-of-type(3) div {
+    background: $color-grey;
+  }
+
+  &:nth-of-type(4) div {
+    background: $color-grey-medium;
+  }
+
+  &:nth-of-type(5) div {
+    background: $color-grey-light;
+  }
+
+  &:nth-of-type(6) div {
+    background: $color-cat-danse;
+  }
+
+  &:nth-of-type(7) div {
+    background: $color-cat-jeunesse;
+  }
+
+  &:nth-of-type(8) div {
+    background: $color-cat-cirque;
+  }
+
+  &:nth-of-type(9) div {
+    background: $color-cat-theatre;
+  }
+
+  &:nth-of-type(10) div {
+    background: $color-cat-concert;
+  }
+
+  &:nth-of-type(11) div {
+    background: $color-cat-humour;
+  }
+
+  &:nth-of-type(12) div {
+    background: $color-cat-opera;
+  }
+
+  &:nth-of-type(13) div {
+    background: $color-primary-dark;
+  }
+
+  &:nth-of-type(14) div {
+    background: $color-primary-light;
+  }
+}

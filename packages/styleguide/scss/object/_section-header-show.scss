@@ -1,0 +1,139 @@
+.show--header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -2rem;
+  color: $color-primary-light;
+  background: $color-primary-dark;
+
+  @media #{small-up} {
+    font-family: $raleway;
+  }
+
+  @media #{$medium-up} {
+    flex-direction: row;
+
+    &>* {
+      width: 50%;
+    }
+  }
+
+  h1 {
+    margin: 3rem 0 0.5rem;
+
+    @media #{$small-up} {
+      font-family: $raleway;
+      font-size: 2em;
+      font-weight: 900;
+    }
+  }
+}
+
+.show--cover {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    z-index: 0;
+    width: 100%;
+    height: auto;
+
+    @supports (object-fit: cover) {
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+
+    @media #{$medium-up} {
+      top: 80%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.show--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem 4rem;
+  height: 100%;
+  font-family: $raleway;
+
+  @media #{$medium-up} {
+    padding: 0 3rem 4rem;
+  }
+}
+
+.show--author {
+  margin: 0;
+  line-height: 1;
+  font-size: $bigger;
+
+  @media #{$small-up} {
+    margin: 1rem 0;
+    font-family: $raleway;
+    font-weight: 700;
+  }
+}
+
+.show--location {
+  font-size: $smaller;
+}
+
+.show--genre {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0 1rem 0;
+}
+
+.show--meta,
+.show--action {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &>* {
+    width: 50%;
+  }
+
+  @media #{$small-up} {
+    &>* {
+      width: auto;
+    }
+  }
+}
+
+.show--age-signal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-align: center;
+  border: 2px solid $color-primary-light;
+  border-radius: 5px;
+}
+
+.show--meta {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+
+  time {
+    text-align: right;
+  }
+}
+
+.show--action {
+  align-items: center;
+  justify-content: space-between;
+}

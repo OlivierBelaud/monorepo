@@ -1,0 +1,68 @@
+.form-purchase {
+  h1 {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  form {
+    @media #{$medium-up} {
+      margin: 0 auto;
+      max-width: 50%;
+    }
+
+    div {
+      margin: 0.5rem 0;
+    }
+
+    label {
+      font-weight: 400;
+      color: darken($color-grey, 15%);
+
+      @media #{$small-up} {
+        font-family: $raleway;
+      }
+    }
+
+    input:not([type=submit]) {
+      border: 2px solid $color-grey-light;
+      border-radius: 23px;
+    }
+  }
+
+  .hr {
+    position: relative;
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      transform: translateY(-50%);
+      background: $color-grey;
+    }
+
+    span {
+      position: relative;
+      padding: 0 1rem;
+      background: $color-primary-light;
+    }
+
+    & + .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      * {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .button {
+    margin: 3rem auto;
+    background: $color-primary;
+  }
+}

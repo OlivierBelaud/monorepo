@@ -1,0 +1,219 @@
+////
+/// Ui Card Pricing
+////
+
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+@media #{$medium-up} {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+  }
+}
+
+.card-pricing {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 6px 0 hsla(0%, 0%, 0%, 0.2%);
+
+  a {
+    text-decoration: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 1em;
+    text-align: center;
+    color: $color-primary-light;
+
+    h2 {
+      margin: 0;
+      line-height: 3;
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      span {
+        position: relative;
+        display: block;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 50%;
+          width: 50%;
+          height: 3px;
+          transform: translateX(-50%);
+          background: $color-primary-light;
+        }
+
+        @media #{$small-up} {
+          font-family: $opensans;
+          font-weight: 700;
+        }
+      }
+    }
+
+    a {
+      color: #fff;
+    }
+
+    &+div {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      padding: 1em 1em 2em;
+      height: 100%;
+
+      *:last-of-type {
+        margin-top: 0;
+      }
+
+      @media #{$small-up} {
+        padding: 1em 1.5em 2em;
+        font-family: $opensans;
+      }
+    }
+  }
+
+  .price {
+    flex: 1 0 3rem;
+    line-height: 1;
+    font-size: 2em;
+    text-align: center;
+
+    strong {
+      font-size: 3.5rem;
+      font-weight: 400;
+    }
+    span {
+      font-size: 0.75em;
+    }
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+  }
+
+  .screen {
+    margin-top: auto;
+
+    strong {
+      display: block;
+    }
+  }
+
+  ul {
+    flex: 10;
+    margin: 2rem 0 3rem;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0.5rem 1rem;
+      list-style: none;
+      font-weight: bold;
+    }
+  }
+
+  .button {
+    flex: 0 1 1rem;
+    margin: auto 3rem 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 22px;
+
+    @media #{$small-up} {
+      font-size: 1.2rem;
+    }
+  }
+
+  header,
+  .button {
+    color: $color-primary-light;
+    background: $color-primary;
+  }
+
+  &:nth-of-type(1) {
+
+    header,
+    .button {
+      display: block;
+
+      &:hover,
+      &:focus {
+        background: darken($color-primary, 5);
+      }
+    }
+
+    .price {
+      color: $color-primary;
+    }
+  }
+
+  &:nth-of-type(2) {
+
+    header,
+    .button {
+      background: $color-cat-concert;
+
+      &:hover,
+      &:focus {
+        background: darken($color-cat-concert, 5);
+      }
+    }
+
+    .price {
+      color: $color-cat-concert;
+    }
+  }
+
+  &:nth-of-type(3) {
+
+    header,
+    .button {
+      background: $color-cat-cirque;
+
+      &:hover,
+      &:focus {
+        background: darken($color-cat-cirque, 5);
+      }
+    }
+
+    .price {
+      color: $color-cat-cirque;
+    }
+  }
+
+  &:nth-of-type(4) {
+
+    header,
+    .button {
+      background: $color-cat-opera;
+
+      &:hover,
+      &:focus {
+        background: $color-cat-opera;
+      }
+    }
+
+    .price {
+      color: $color-cat-opera;
+    }
+  }
+
+  &.active {
+    border: 4px solid $color-primary-dark;
+  }
+}

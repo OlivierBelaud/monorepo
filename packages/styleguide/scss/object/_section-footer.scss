@@ -1,0 +1,177 @@
+.footer {
+  margin-top: auto 0 4.5rem;
+  line-height: 1.4;
+  font-size: 0.8em;
+  color: $color-primary-light;
+  border-bottom: 1px solid $color-primary-light;
+  background: $color-secondary;
+
+  @media #{$medium-up} {
+    margin-bottom: 0;
+    font-family: $raleway;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    @media #{$medium-up} {
+      padding: 0 1rem 0.5rem 0;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-primary-light;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  padding: 0.75rem 1.5rem;
+
+  @media #{$medium-up} {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  font-weight: normal;
+
+  @media #{$medium-up} {
+    flex-direction: row;
+    padding-top: 0;
+    font-family: $raleway;
+  }
+}
+
+.footer-social-media {
+  padding: 1rem 0;
+  width: 100%;
+  border: 1px solid $color-primary-light;
+  border-width: 1px 0;
+
+  @media #{$medium-up} {
+    margin: 0 2rem 0 auto;
+    padding: 0;
+    width: 20%;
+    border: none;
+  }
+}
+
+.social-media {
+  ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    @media #{$medium-up} {
+      justify-content: flex-start;
+    }
+
+    li {
+      margin: 0 1rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 0 1rem;
+  text-align: right;
+  background: darken($color-secondary, 5%);
+
+  p {
+    margin: 0;
+  }
+}
+
+.form-footer {
+  @media #{$medium-up} {
+    width: 33%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .mc-field-group {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+
+    @media #{$medium-up} {
+      flex-direction: row;
+      > div:last-child {
+        flex: 0 1 5rem;
+      }
+    }
+  }
+
+  div~p {
+    font-weight: 400;
+
+    @media #{$medium-up} {
+      font-family: $raleway;
+      font-size: 0.8em;
+    }
+  }
+
+  small {
+    display: block;
+  }
+
+  .indicates-required {
+    text-align: right;
+  }
+
+  label {
+    color: $color-primary-light;
+  }
+
+  input[type=email] {
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+    color: $color-primary-dark;
+
+    @media #{$medium-up} {
+      flex: 0 1 auto;
+    }
+
+    &::-moz-placeholder,
+    &::placeholder,
+    &::-webkit-input-placeholder {
+      color: $color-primary-dark;
+    }
+  }
+
+  .button {
+    margin: 1rem auto;
+    font-size: 0.8rem;
+    color: $color-primary-light;
+
+    @media #{$medium-up} {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 0.75rem;
+  color: $color-secondary;
+
+  @media #{$medium-up} {
+    & {
+      justify-content: flex-end;
+      font-family: $opensans;
+    }
+  }
+
+  li {
+    margin: 0 0.1rem;
+    list-style: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @media #{$medium-up} {
+      font-size: 1rem;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0 0.4rem;
+    text-decoration: none;
+    color: $color-secondary;
+
+    &:hover, &:focus {
+      color: $color-primary-light;
+      background: $color-secondary-light;
+    }
+  }
+
+  .active a {
+    text-decoration: underline;
+  }
+
+  .ais-pagination--item__disabled {
+    text-decoration: line-through;
+    color: $gray;
+  }
+}

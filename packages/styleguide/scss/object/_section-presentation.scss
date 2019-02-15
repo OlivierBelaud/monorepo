@@ -1,0 +1,49 @@
+.section-presentation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: -4rem;
+  padding: $base-line;
+  min-height: 45vh;
+  min-height: calc(50vw - 180px);
+  color: #fff;
+  background: url(/assets/images/background-header-small.jpg) no-repeat 50% 50%;
+  background-size: cover;
+
+  h2 {
+    padding: 0 2vw;
+    width: 100%;
+    max-width: 40em;
+    font-family: $raleway;
+    font-weight: 700;
+    font-size: 2rem;
+    background: none;
+
+    @media #{$medium-up} {
+      font-size: 3.8rem;
+    }
+  }
+
+  p {
+    margin: auto;
+    padding: 0 2vw;
+    max-width: 46em;
+  }
+
+  strong {
+    font-weight: 500;
+    text-decoration: none;
+    color: $color-primary;
+  }
+
+  .button {
+    padding: 0.7rem 1.2rem;
+    font-family: $raleway;
+    font-size: 1.2rem;
+
+    @media #{$medium-up} {
+      font-size: 1.85rem;
+    }
+  }
+}

@@ -1,0 +1,201 @@
+//@import '../base/buttons';
+
+.js-expandmore button, .button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-primary-light;
+  border: none;
+  border-radius: 7px;
+  background: $color-primary-dark;
+  box-shadow: 0 4px 6px 0 hsla(33%, 33%, 33%, 0.2%);
+
+  &:hover, &:focus {
+    background: lighten($color-primary-dark, 5%);
+  }
+
+  @media #{$small-up} {
+    font-family: $raleway;
+  }
+}
+
+.button--cta {
+  border: 1px solid $color-primary-light;
+  background: none;
+  text-shadow: $a11y-text-shadow;
+
+  &:hover, a:focus {
+    background: darken($color-primary-light, 5%);
+  }
+
+  &:visited {
+    color: $color-primary-light;
+  }
+}
+
+.button--cta--darkbg {
+  color: $color-primary-light;
+  background: $color-primary-dark;
+
+  &:hover, a:focus {
+    background: lighten($color-primary-dark, 10%);
+  }
+}
+
+.button--signin {
+  background: $color-btn-modal;
+
+  &:hover, a:focus {
+    background: darken($color-btn-modal, 10%);
+  }
+}
+
+.button--play, .button--signup {
+  background: $color-btn-modal-2;
+
+  &:hover, a:focus {
+    background: darken($color-btn-modal-2, 10%);
+  }
+}
+
+.button--play, .button--play:hover, .button--play:focus {
+  width: 45%;
+  min-height: 3.5em;
+  background-image: url(/assets/img/button-play.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 15%;
+
+  @media #{$small-up} {
+    & {
+      width: 35%;
+      background-size: 10%;
+    }
+  }
+}
+
+.button--list {
+  text-transform: uppercase;
+  background: none;
+  box-shadow: none;
+
+  &:before {
+    content: '';
+    display: block;
+    margin: 0 auto 1rem;
+    width: 40px;
+    height: 40px;
+    background: url(/assets/img/button-list.png) no-repeat 50% 50%;
+    background-size: contain;
+  }
+
+  &:hover, &:focus {
+    color: darken($color-primary-light, 5%);
+    background: transparent;
+  }
+}
+
+.button--download {
+  text-transform: uppercase;
+  background: none;
+  box-shadow: none;
+
+  &:before {
+    content: '';
+    display: block;
+    margin: 0 auto 1rem;
+    width: 40px;
+    height: 40px;
+    background: url(/assets/img/button-download.png) no-repeat 50% 50%;
+    background-size: contain;
+  }
+
+  &:hover, &:focus {
+    color: darken($color-primary-light, 5%);
+    background: transparent;
+  }
+}
+
+.button--invite {
+  text-transform: uppercase;
+  background: none;
+  box-shadow: none;
+
+  &:before {
+    content: '';
+    display: block;
+    margin: 0 auto 1rem;
+    width: 40px;
+    height: 40px;
+    background: url(/assets/img/button-invite.png) no-repeat 50% 50%;
+    background-size: contain;
+  }
+
+  &:hover, &:focus {
+    color: darken($color-primary-light, 5%);
+    background: transparent;
+  }
+}
+
+.button--comment {
+  text-transform: uppercase;
+  background: none;
+  box-shadow: none;
+
+  &:before {
+    content: '';
+    display: block;
+    margin: 0 auto 1rem;
+    width: 40px;
+    height: 40px;
+    background: url(/assets/img/button-comment.png) no-repeat 50% 50%;
+    background-size: contain;
+  }
+
+  &:hover, &:focus {
+    color: darken($color-primary-light, 5%);
+    background: transparent;
+  }
+}
+
+.button--link {
+  color: $color-primary-light;
+  background: $color-primary-dark;
+
+  &:hover, &:focus {
+    background: $color-secondary;
+  }
+
+  &:visited {
+    color: $color-primary-light;
+  }
+}
+
+.button--close {
+  position: absolute;
+  z-index: 2;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.btn--top.btn--absolute {
+  top: 15px;
+}
+
+footer .button {
+  color: $color-primary-light;
+  background: $color-cat-humour;
+}

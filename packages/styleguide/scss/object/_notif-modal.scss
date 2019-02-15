@@ -1,0 +1,351 @@
+/* needed for old browsers */
+button:active, button:focus {
+  color: $color-primary-light;
+}
+
+dialog {
+  display: block;
+  border: 0;
+}
+
+/* removes scroll when modal is opened */
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* overlay covers everything */
+.simple-animatedtransform-modal-overlay {
+  position: fixed;
+  z-index: 666;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0.8;
+  background: $color-grey;
+  background: -webkit-linear-gradient(to top, $color-grey, $color-grey-medium);
+  background: linear-gradient(to top, $color-grey, $color-grey-medium);
+}
+
+.simple-animatedtransform-modal-overlay[data-background-click='disabled'] {
+  cursor: auto;
+}
+
+.simple-animatedtransform-modal-overlay {
+  animation: fadewhite ease 0.5s 1 normal;
+}
+
+@keyframes fadewhite {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* modal */
+/* for this example: mobile */
+.simple-animatedtransform-modal {
+  position: fixed;
+  z-index: 667;
+  top: 1%;
+  right: auto;
+  left: 1%;
+  overflow: auto;
+  padding: 2em;
+  width: 98%;
+  height: 98%;
+  line-height: 1.5;
+  font-size: 1.3em;
+  color: $color-primary-light;
+  background: $color-primary;
+  background: linear-gradient(to top, $color-primary, #86b7c0);
+
+  @media #{$small-up} {
+    & {
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  @media #{$medium-up} {
+    & {
+      top: 5vh;
+      left: 15%;
+      padding: 2em 6em;
+      width: 70%;
+      max-height: 90vh;
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem 0;
+    font-family: sans-serif;
+    font-size: 0.7em;
+
+    @media #{$medium-up} {
+      & {
+        align-items: flex-end;
+        flex-direction: row;
+      }
+    }
+
+    div {
+      margin: 1rem 0;
+    }
+
+    p {
+      margin: 1.2rem 0;
+      text-align: center;
+    }
+
+    .button {
+      font-size: 1.2rem;
+      color: $color-primary-light;
+    }
+  }
+}
+
+[class*='modal-title'] {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: $color-primary-light;
+}
+
+.simple-animatedtransform-modal-close[type='button'] {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+
+  @media #{$medium-up} {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  &:hover, &:focus {
+    transform: translate(0);
+    box-shadow: none;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(/assets/img/button-close.png) no-repeat 50% 50%;
+  }
+
+  &:hover:after, &:focus:after {
+    transform: translate(0);
+    background-image: url(/assets/img/button-close-hover.png);
+  }
+}
+
+.simple-modal-close:focus, .simple-modal-close:hover, .simple-modal-close:active {
+  outline: 1px dotted #fff;
+}
+
+.simple-modal-close:hover, .simple-modal-close:active {
+  background: #4d287f;
+}
+
+.modal-close__text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0;
+}
+
+.dialog__content {
+  position: fixed;
+  z-index: 202;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.dialog.dialog--active {
+  z-index: inherit;
+  overflow-y: auto;
+  margin: 2vw;
+  max-width: 700px;
+  pointer-events: auto;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  position: relative;
+  padding: 3rem 4rem;
+  height: auto;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(0deg, #3587ab, #86b7c0);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card__text {
+  margin: 0 1rem;
+  padding: 1.6rem;
+  width: 100%;
+  line-height: 1.1;
+  font-size: $bigger;
+  @media #{$medium-up} {
+    line-height: 1.5;
+    font-size: $title3;
+  }
+}
+
+.card__actions {
+  @media #{$medium-up} {
+    display: flex;
+  }
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 16px;
+  text-align: center;
+
+  .button--dark {
+    color: $color-primary-light;
+  }
+
+  > * {
+    display: block;
+    flex: 1 0 auto;
+    margin: 0 0.3rem 0.5rem;
+    width: calc(100% - 0.6rem);
+    @media #{$medium-up} {
+      width: auto;
+    }
+  }
+
+}
+
+.simple-animatedtransform-modal {
+  animation: pop ease 0.5s 1 normal;
+}
+
+@-webkit-keyframes pop {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  }
+
+  100% {
+    left: 15%;
+    width: 70%;
+    max-height: 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  }
+}
+
+@keyframes pop {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  }
+
+  100% {
+    left: 15%;
+    width: 70%;
+    max-height: 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  }
+}
+
+.btn--top.btn--absolute {
+  top: 15px;
+}
+
+.button-close {
+  position: absolute;
+  z-index: 2;
+  top: 2em;
+  right: 2em;
+  width: 1.5rem;
+}
+
+.dialog__content {
+  position: fixed;
+  z-index: 202;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.dialog.dialog--active {
+  z-index: inherit;
+  overflow-y: auto;
+  margin: 2vw;
+  max-width: 700px;
+  pointer-events: auto;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+
+.dialog.dialog--active .card {
+  position: relative;
+  padding: 0.5vw;
+  height: auto;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(0deg, #3587ab, #86b7c0);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.dialog.dialog--active .card .card__text {
+  margin: 0 1rem;
+  padding: 1.6rem;
+  width: 100%;
+  font-size: 2rem;
+}

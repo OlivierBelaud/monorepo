@@ -1,0 +1,157 @@
+.header-step {
+  margin: 1.5rem 0 3rem;
+  &,p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  h1 {
+    color: $color-secondary;
+  }
+}
+
+.info {
+  font-size: 0.8rem;
+}
+
+#payment-form {
+  margin: 1em auto;
+  max-width: 40rem;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+.checkbox {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-primary-dark;
+
+  input {
+    margin: 0 0.3rem;
+  }
+}
+
+.CardField-input-wrapper {
+  border: 1px solid #000 important;
+}
+
+.CardField-number {
+  border: 1px solid #000 important;
+  background: #000 !important;
+}
+
+#card-errors {
+  margin: 0.5em 0;
+  font-family: $base-font-name;
+  color: firebrick !important;
+}
+
+.CardField-number {
+  background: $color-cat-cirque !important;
+}
+
+.CardField-child {
+  display: block;
+  background: #ccc;
+}
+
+.StripeElement {
+  padding: 10px 12px;
+  height: 40px;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.progressbar {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3rem 0;
+  padding: 0;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+  text-align: center;
+
+  @media #{$medium-up} {
+    & {
+      font-family: 'Regular';
+    }
+  }
+
+  li {
+    position: relative;
+    width: 33%;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: $color-primary-dark;
+  }
+
+  li:before {
+    position: relative;
+    z-index: 1;
+    content: counter(step);
+    display: block;
+    margin: 0 auto 5px auto;
+    width: 40px;
+    line-height: 40px;
+    font-size: 2rem;
+    counter-increment: step;
+    text-align: center;
+    color: $color-primary-light;
+    border-radius: 50%;
+    background: $color-grey;
+  }
+
+  li:after {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    top: 17px;
+    left: -50%;
+    width: 100%;
+    height: 8px;
+    background: $color-grey;
+  }
+
+  li:first-child:after {
+    content: none;
+  }
+
+  li:nth-of-type(4):before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: $color-primary-dark no-repeat 50% 50%;
+    background-size: 60%;
+  }
+
+  li:nth-of-type(4):after {
+    top: 23px;
+  }
+
+  li.active:before, li.active:after {
+    color: $color-primary-light;
+    background-color: $color-primary-dark;
+  }
+}

@@ -1,0 +1,93 @@
+section {
+  padding: $base-line*2 0 0;
+  text-align: center;
+
+  p {
+    margin: auto;
+    max-width: 46em;
+  }
+
+  h2 {
+    padding: 0.5rem 1rem;
+    line-height: $ms0;
+    font-family: $raleway;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: left;
+    background: $color-primary-light;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      flex: 1 1 15em;
+
+      @media #{$small-up} {
+        flex: 1 1 17em;
+      }
+
+      @media #{$medium-up} {
+        flex: 1 1 13em;
+      }
+
+      @media #{$xlarge-up} {
+        flex: 1 1 10em;
+      }
+    }
+  }
+}
+
+.section-wrapper {
+  margin: auto;
+  max-width: 35em;
+}
+
+.section-text {
+  padding: 0 1vmin $base-line;
+
+  @media #{$medium-up} {
+    padding: 0 13vmin $base-line;
+  }
+}
+
+.section-title {
+  @media #{$medium-up} {
+    & {
+      width: 100%;
+
+      @include grid(2);
+
+      h2, p {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        font-size: 1.9rem;
+      }
+    }
+  }
+}
+
+.section-discover .section-title h2 {
+  font-size: 2.5rem;
+}
+
+.section-button {
+  margin: 1.5em auto;
+  padding-right: 1em;
+  padding-left: 1em;
+  max-width: $layout-max-width;
+
+  p {
+    max-width: 100%;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media #{$medium-up} {
+      font-family: $raleway;
+      text-align: right;
+    }
+  }
+}
