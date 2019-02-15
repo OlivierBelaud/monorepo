@@ -1,13 +1,11 @@
 {
   "name": "@scenso/styleguide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scenso Styleguide",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-  }
+  "license": "MIT"
 }
