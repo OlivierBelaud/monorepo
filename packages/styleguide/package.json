@@ -1,6 +1,6 @@
 {
   "name": "@scenso/styleguide",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Scenso Styleguide",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "publishConfig": {
     "access": "public"
-  }, 
+  },
   "author": "",
   "license": "MIT"
 }
