@@ -1,6 +1,6 @@
 {
   "name": "@scenso/styleguide",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Scenso Styleguide",
   "main": "index.js",
   "scripts": {
